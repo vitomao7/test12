@@ -1,0 +1,365 @@
+/*设置多有标签初始内外边距为零*/
+*{
+    margin: 0px;
+    padding: 0px;
+}
+/*设置所有文字初始字体为serif，初始大小为20px*/
+body{
+    font-family: serif;
+    font-size: 20px;
+}
+/*用来清除浮动*/
+.clear{
+    clear: both;
+}
+
+/*设置顶部menu部分样式*/
+#menu{
+    height: 60px;
+    width: 100%;
+    border-bottom: solid 1px #cccccc;
+    position: fixed;
+    margin-bottom: 100px;
+    z-index: 999;
+    background-color: white;
+}
+#menu .center{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    /*background-color: #ff7c76;*/
+}
+#city{
+    float: left;
+    height: 60px;
+    width: 120px;
+    text-align: center;/*使div中文字左右居中*/
+    position: relative;
+    z-index: 1;
+
+}
+
+#city a{
+    line-height: 60px;
+    color: black;
+    text-decoration: none;
+}
+#city #citys{
+    background-color: #FFFFFF;
+    width: 300px;
+    height: 300px;
+    display: none;
+    border: 1px solid #cccccc;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /*none值，该标签不显示。block值，为块级标签。inline值，为行级标签，
+     inline-block值，一行可以有多个标签，并且能够设置宽和高*/
+}
+
+#city:hover #citys{
+    display: block;
+    z-index: -1;
+}
+/*设置无序列表*/
+#menu ul{
+    float: left;
+    height: 100%;
+    width: 300px;
+    position: relative;
+    z-index: 2;
+    /*border: 1px solid #cccccc;*/
+}
+#menu ul li{
+    width:60px ;
+    text-align: center;
+    float: left;
+    list-style: none;
+    height: 100%;
+}
+#menu ul li a{
+
+    line-height: 60px;
+    text-decoration: none;
+    color: black;
+}
+#menu ul .firstli{
+    background-color: #ef4238;
+}
+#menu ul .firstli a{
+    color: white;
+}
+#menu ul li:hover a{
+    color: #ef4238;
+}
+#menu ul .firstli:hover a{
+    color: white;
+}
+
+#app{
+    float: left;
+    width: 120px;
+    height: 100%;
+    text-align: center;
+}
+#app a{
+    line-height: 60px;
+    text-decoration: none;
+    color: black;
+}
+#app:hover{
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+    width: 118px;
+}
+
+#menu .form{
+    padding-top: 5px;
+    float: left;
+    height: 55px;
+    width: 260px;
+}
+
+#text{
+    width: 200px;
+    height: 30px;
+    border-radius: 15px;
+    border: 1px solid #676767;
+}
+#sub{
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    border: none;
+    /*background-color: red;*/
+    background-image: url("../img/ser.png");
+    position: relative;
+    top: 10px;
+    left: -30px;
+}
+#login{
+    margin-left: 2px;
+    float: left;
+    width: 60px;
+    height: 60px;
+    /*background-color: red;*/
+}
+#login img{
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+#login:hover img{
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+}
+/*设置中间部分*/
+.zhong{
+    width: 1200px;
+    height: 800px;
+    border: 1px solid #cccccc;
+
+    margin: 0px auto;
+    position: relative;
+    top: 150px;
+    margin-bottom: 210px;
+
+}
+.zhong .zhong_left {
+    width: 700px;
+    float: left;
+    margin-top: 50px;
+    /*margin-left: 20px;*/
+}
+.zhong .zhong_left ul{
+    position: relative;
+    left: 10px;
+    width: 700px;
+}
+.zhong .zhong_left ul li{
+    list-style: none;
+    float: left;
+    margin-left: 20px;
+}
+.zhong .zhong_left ul li img{
+    margin-right: 8px;
+ }
+.zhong .zhong_left ul li span{
+    position: relative;
+    bottom: 8px;
+    font-size: 18px;
+}
+.zhong .zhong_left .row{
+    width: 600px;
+    position: relative;
+    top: 20px;
+    left: 30px;
+}
+.zhong .zhong_left table{
+    position: relative;
+    left: 20px;
+}
+.zhong .zhong_left table caption{
+    margin-bottom: 30px;
+    margin-top: 50px;
+}
+.zhong .zhong_left table tr td{
+    width: 44px;
+    position: relative;
+    z-index: 888;
+}
+.zhong .zhong_left table .firstrd{
+    width: 70px;
+    color: #676767;
+    background-color: white;
+    /*text-align: center;*/
+}
+.zhong .zhong_right{
+    height: 100%;
+    width: 380px;
+    background-color:whitesmoke;
+    float: right;
+}
+.zhong .zhong_right .zhong_right_top{
+    width: 400px;
+    height: 350px;
+}
+ hr{
+    border-top:1px dashed #cccccc;
+     width: 320px;
+     margin: 20px;
+     text-align: center;
+}
+.zhong .zhong_right .zhong_right_top li{
+    width: 400px;
+    list-style: none;
+    height: 100%;
+}
+.zhong .zhong_right .zhong_right_top .oneli img{
+    position: relative;
+    top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    width: 130px;
+    float: left;
+}
+.zhong .zhong_right .zhong_right_top .oneli .g{
+   position: relative;
+    top: 25px;
+    margin-top: 10px;
+
+}
+
+.zhong .zhong_right .zhong_right_top .oneli .g strong{
+    color: black;
+    font-size: 22px;
+}
+.zhong .zhong_right .zhong_right_top .oneli .g .l2{
+   line-height: 30px;
+    font-size: 14px;
+    color: black;
+}
+.zhong .zhong_right .zhong_right_top .oneli .g .l3{
+    line-height: 30px;
+    font-size: 14px;
+    color: black;
+}
+.zhong .zhong_right .zhong_right_top .oneli .g  .l2 span{
+    color: #676767;
+}
+.zhong .zhong_right .zhong_right_top .oneli .g  .l3 span{
+    color: #676767;
+}
+.zhong .zhong_right .zhong_right_top .l,.zhong .zhong_right .zhong_right_top .date{
+    margin-top: 10px;
+    float: left;
+    margin-left: 20px;
+    font-size: 16px;
+
+}
+.zhong .zhong_right .zhong_right_top .l span{
+    color: #676767;
+}
+.zhong .zhong_right .zhong_right_top .date span{
+    color: #676767;
+}
+.zhong .zhong_right .zhong_right_top .date{
+    color: red;
+}
+.zhong .zhong_right_center{
+    width: 360px;
+    height: 150px;
+    padding-left: 20px;
+    font-size: 16px;
+}
+.zhong .zhong_right_center .p1{
+
+    color: #676767;
+
+}
+.zhong .zhong_right_center .p2{
+    text-align: center;
+    margin-top: 50px;
+    color: black;
+}
+.zhong .zhong_right_center .p2 span{
+    color: red;
+}
+.zhong .zhong_right_center .p3{
+    margin-top: 50px;
+    color: black;
+}
+.zhong .zhong_right_center .p3 strong{
+    color: red;
+}
+.zhong .zhong_right_center .p3 strong span{
+    font-size: 26px;
+    margin-left: 2px;
+}
+.zhong .zhong_right_foot div{
+    margin-left: 80px;
+    width: 200px;
+    height: 180px;
+}
+.zhong .zhong_right_foot div input{
+    border-radius: 20px;
+    width: 200px;
+    height: 35px;
+    margin-top: 10px;
+    border: 1px solid #676767;
+    padding-left: 4px;
+}
+.zhong .zhong_right_foot div span{
+    color: #676767;
+    position: relative;
+    top: -31px;
+    left:130px;
+    font-size: 14px;
+}
+.zhong .zhong_right_foot div button{
+    border-radius: 20px;
+    width: 200px;
+    height: 35px;
+    margin-top: 40px;
+    border: 1px solid #676767;
+    background-color: #eeeeee;
+}
+.foot{
+    background-color: #262426;
+    width: 100%;
+    height: 150px;
+    padding-top: 50px;
+
+}
+.foot p{
+    color: gray;
+    text-align: center;
+    font-size: 16px;
+}
+.foot p a{
+    color: red;
+}
+
+
+
+

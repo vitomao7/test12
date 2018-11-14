@@ -1,0 +1,506 @@
+/*设置多有标签初始内外边距为零*/
+*{
+    margin: 0px;
+    padding: 0px;
+}
+/*设置所有文字初始字体为serif，初始大小为20px*/
+body{
+    font-family: serif;
+    font-size: 20px;
+}
+/*用来清除浮动*/
+.clear{
+    clear: both;
+}
+
+/*设置顶部menu部分样式*/
+#menu{
+    z-index: 999;
+    position: fixed;
+    background-color: white;
+    height: 60px;
+    width: 100%;
+    border-bottom: solid 1px #cccccc;
+}
+#menu .center{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    /*background-color: #ff7c76;*/
+}
+#city{
+    float: left;
+    height: 60px;
+    width: 120px;
+    text-align: center;/*使div中文字左右居中*/
+    position: relative;
+    z-index: 1;
+
+}
+
+#city a{
+    line-height: 60px;
+    color: black;
+    text-decoration: none;
+}
+#city #citys{
+    background-color: #FFFFFF;
+    width: 300px;
+    height: 300px;
+    display: none;
+    border: 1px solid #cccccc;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /*none值，该标签不显示。block值，为块级标签。inline值，为行级标签，
+     inline-block值，一行可以有多个标签，并且能够设置宽和高*/
+}
+
+#city:hover #citys{
+    display: block;
+    z-index: -1;
+}
+/*设置无序列表*/
+#menu ul{
+    float: left;
+    height: 100%;
+    width: 300px;
+    position: relative;
+    z-index: 2;
+    /*border: 1px solid #cccccc;*/
+}
+#menu ul li{
+    width:60px ;
+    text-align: center;
+    float: left;
+    list-style: none;
+    height: 100%;
+}
+#menu ul li a{
+
+    line-height: 60px;
+    text-decoration: none;
+    color: black;
+}
+#menu ul .firstli{
+    background-color: #ef4238;
+}
+#menu ul .firstli a{
+    color: white;
+}
+#menu ul li:hover a{
+    color: #ef4238;
+}
+#menu ul .firstli:hover a{
+    color: white;
+}
+
+#app{
+    float: left;
+    width: 120px;
+    height: 100%;
+    text-align: center;
+}
+#app a{
+    line-height: 60px;
+    text-decoration: none;
+    color: black;
+}
+#apps{
+    display: none;
+    background-color: #fff;
+}
+#app:hover{
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+    width: 118px;
+}
+#app:hover #apps{
+    display: block;
+}
+#menu .form{
+    padding-top: 5px;
+    float: left;
+    height: 55px;
+    width: 260px;
+}
+
+#text{
+    width: 200px;
+    height: 30px;
+    border-radius: 15px;
+    border: 1px solid #676767;
+}
+#sub{
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    border: none;
+    /*background-color: red;*/
+    background-image: url("../img/ser.png");
+    position: relative;
+    top: 10px;
+    left: -30px;
+}
+#login{
+    margin-left: 2px;
+    float: left;
+    width: 60px;
+    height: 60px;
+    /*background-color: red;*/
+}
+#login img{
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+#login:hover img{
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+}
+
+/*设置主题内容部分样式*/
+#content{
+    width:1200px;
+    margin: 0 auto;
+/*     height: 2000px; */
+    /*background-color: #dddddd;*/
+}
+#content .banner{
+    width: 100%;
+    height:400px;
+}
+#content .banner img{
+    margin-top: 60px;
+    width: 1200px;
+    height: 400px;
+}
+
+#content .hot{
+    position: relative;
+    top: 60px;
+    margin-top: 60px;
+    width: 100%;
+    height: 600px;
+    /*background-color: #f27b05;*/
+}
+
+#content .hot .left{
+    padding-left: 60px;
+    float: left;
+    width: 800px;
+    height: 100%;
+}
+#content .hot .left h1{
+    float: left;
+    color: red;
+}
+
+#content .hot .left h3{
+    float: right;
+    padding-top: 10px;
+
+}
+#content .hot .left h3 a{
+    padding-right: 120px;
+    color: red;
+    text-decoration: none;
+}
+#content .hot .left .movie{
+    margin-right: 30px;
+    margin-top: 20px;
+    float: left;
+    width: 150px;
+    height: 250px;
+
+}
+#content .hot .left .movie button{
+    display: block;
+    width: 150px;
+    height: 38px;
+    color: red;
+}
+#content .hot .left .movie button:hover{
+    background-color: red;
+    color: #ffffff;
+}
+#content .hot .left .movie img{
+    display: block;
+    width: 150px;
+    height: 200px;
+}
+#content .hot .left .movie .movieName{
+    color: white;
+    font-size: 20px;
+    position: relative;
+    top:-80px;
+    left: 0px;
+}
+#content .hot .left .movie .movieScore{
+    color: #f27b05;
+    font-size: 20px;
+    position: relative;
+    top:-70px;
+    left: 25px;
+}
+
+
+#content .hot .right{
+    padding-right: 60px;
+    float: right;
+    width: 280px;
+    height: 100%;
+}
+.right{
+
+}
+.right h1{
+    margin-bottom: 34px;
+    color: red;
+}
+.right ul li{
+    list-style: none;
+}
+.right ul li a{
+    list-style: none;
+    color: #000;
+    text-decoration: none;
+}
+#content .hot .right ul li:hover{
+    background-color: #eeeeee;
+}
+#content .hot .right ul .firstli{
+    height: 80px;
+    width: 280px;
+}
+#content .hot .right .firstli div{
+    padding-left: 10px;
+    float: right;
+    width: 170px;
+    height: 80px;
+}
+#content .hot .right .firstli label{
+    color: red;
+}
+#content .hot .right .firstli a,#content .hot .right .firstli span{
+    line-height: 30px;
+}
+#content .hot .right ul li.firstli img{
+    width: 100px;
+    height: 80px;
+}
+#content .hot .right ul li span{
+    float: right;
+    color: red;
+}
+#content .hot .right ul li{
+    height: 30px;
+}
+.right ul li a{
+    line-height: 30px;
+}
+#content .release{
+    margin-top: 60px;
+    position: relative;
+    top: 60px;
+    width: 100%;
+    height: 800px;
+}
+#content .release .left{
+    padding-left: 60px;
+    float: left;
+    width: 750px;
+    height: 100%;
+}
+#content .release .left h1{
+    float: left;
+    color: red;
+}
+
+#content .release .left h3{
+    float: right;
+    padding-top: 10px;
+
+}
+#content .release .left h3 a{
+    padding-right: 70px;
+    color: red;
+    text-decoration: none;
+}
+#content .release .left .movie{
+    margin-right: 30px;
+    margin-bottom: 80px;
+    margin-top: 30px;
+    float: left;
+    width: 150px;
+    height: 250px;
+
+}
+#content .release .left .movie .think{
+    color: #ffb400;
+    background-color: #cccccc;
+}
+#content .release .left .movie .movieName{
+    color: #fff;
+    position: relative;
+    top: -60px;
+    left: 10px;
+}
+#content .release .left .movie p{
+    width: 100%;
+    height: 30px;
+    /*position: relative;*/
+    display: block;
+    /*top: -10px;*/
+    /*left: 0px;*/
+
+}
+#content .release .left .movie .yugao{
+    position: relative;
+    top: -20px;
+}
+#content .release .left .movie .yugao span{
+    color: #ccc;
+    float: left;
+    display: block;
+    padding: 10px 8px;
+    border-right: dashed 1px #cccccc;
+}
+#content .release .left .movie .movieborder{
+    border: 1px solid #000;
+    padding-bottom: 20px;
+}
+#content .release .left .movie .yugao a{
+    text-decoration: none;
+    color: blue;
+    float: right;
+    display: block;
+    position: relative;
+    top: -45px;
+    padding: 10px 16px;
+}
+#content .release .right{
+    padding-right: 60px;
+    float: right;
+    width: 280px;
+    height: 100%;
+    background-color: #fff;
+}
+.right{
+
+}
+#content .release .right h1{
+    margin-bottom: 34px;
+    color: red;
+}
+#content .release .right ul li{
+    list-style: none;
+}
+#content .release .right ul li a{
+    list-style: none;
+    color: #000;
+    text-decoration: none;
+}
+
+#content .release .right .firstli{
+    border: 1px solid #eee;
+    width: 278px;
+    height: 200px;
+}
+#content .release .right .firstli div{
+    padding-left: 10px;
+    padding-top: 30px;
+    float: left;
+    width: 120px;
+    height: 60px;
+}
+#content .release .right .firstli img{
+    width: 140px;
+    float: left;
+    height: auto;
+}
+#content .release .right .firstli label{
+    color: #cccccc;
+    font-size: 12px;
+}
+#content .release .right .firstli span{
+    line-height: 30px;
+    font-size: 12px;
+    float: left;
+}
+#content .release .right .second{
+    float: left;
+    border: 1px solid #eee;
+    margin-right: 16px;
+    width: 130px;
+    height: 185px;
+    margin-top: 20px;
+}
+#content .release .right .second img{
+    width: 100%;
+    height: 120px;
+}
+#content .release .right .second a{
+    float: left;
+}
+#content .release .right .second span{
+    float: left;
+    color: #ffb400;
+}
+#content .release .right .third{
+    float: left;
+    border: 1px solid #eeeeee;
+    width: 130px;
+    height: 185px;
+    margin-top: 20px;
+}
+#content .release .right .third img{
+    width: 100%;
+    height: 120px;
+}
+#content .release .right .third a{
+    float: left;
+    
+}
+#content .release .right .third span{
+    float: left;
+    color: #ffb400;
+}
+
+
+#content .release .right ul li span{
+    float: right;
+    color: #ffb400;
+    font-size: 12px;
+}
+#content .release .right ul li{
+    height: 35px;
+}
+#content .release .right ul li a{
+    line-height: 35px;
+}
+#content .release .right ul li:hover{
+    background-color: #cccccc;
+}
+
+.footer{
+    background-color:#262426;
+    padding:56px 0;
+    min-width:1200px;
+    margin-top:82px;
+}
+.footer p{
+    text-align:center;
+    font-size:14px;
+    line-height:20px
+}
+.footer p,.footer p a{
+    color:#666;
+    text-decoration: none;
+}
+.footer .friendly-links a{
+    color:#ef4238
+}
+.footer .friendly-links a:hover{
+    text-decoration:underline
+}
+

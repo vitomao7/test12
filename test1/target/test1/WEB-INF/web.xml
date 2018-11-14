@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>test1</display-name>
+ <servlet>
+ 	<servlet-name>IndexServlet</servlet-name>
+ 	<servlet-class>com.oaec.control.IndexServlet</servlet-class>
+ </servlet>
+ <servlet-mapping>
+ 	<servlet-name>IndexServlet</servlet-name>
+ 	<url-pattern>/IndexServlet.do</url-pattern>
+ </servlet-mapping>
+ <servlet>
+ 	<servlet-name>CinemaSelServlet</servlet-name>
+ 	<servlet-class>com.oaec.control.CinemaSelServlet</servlet-class>
+ </servlet>
+ <servlet-mapping>
+ 	<servlet-name>CinemaSelServlet</servlet-name>
+ 	<url-pattern>/CinemaSelServlet.do</url-pattern>
+ </servlet-mapping> 
+ 
+ <servlet>
+ 	<servlet-name>AdminIndexServlet</servlet-name>
+ 	<servlet-class>com.oaec.control.AdminIndexServlet</servlet-class>
+ </servlet>
+ <servlet-mapping>
+ 	<servlet-name>AdminIndexServlet</servlet-name>
+ 	<url-pattern>/AdminIndexServlet.do</url-pattern>
+ </servlet-mapping>    
+ <servlet>
+ 	<servlet-name>UserInfoServlet</servlet-name>
+ 	<servlet-class>com.oaec.control.UserInfoServlet</servlet-class>
+ </servlet>
+ <servlet-mapping>
+ 	<servlet-name>UserInfoServlet</servlet-name>
+ 	<url-pattern>/UserInfoServlet.do</url-pattern>
+ </servlet-mapping>     
+ <servlet>
+ 	<servlet-name>InsertUserServlet</servlet-name>
+ 	<servlet-class>com.oaec.control.InsertUserServlet</servlet-class>
+ </servlet>
+ <servlet-mapping>
+ 	<servlet-name>InsertUserServlet</servlet-name>
+ 	<url-pattern>/InsertUserServlet.do</url-pattern>
+ </servlet-mapping>   
+ <servlet>
+ 	<servlet-name>DeleteUserServlet</servlet-name>
+ 	<servlet-class>com.oaec.control.DeleteUserServlet</servlet-class>
+ </servlet>
+ <servlet-mapping>
+ 	<servlet-name>DeleteUserServlet</servlet-name>
+ 	<url-pattern>/DeleteUserServlet.do</url-pattern>
+ </servlet-mapping>    
+  <servlet>
+ 	<servlet-name>LoginServlet</servlet-name>
+ 	<servlet-class>com.oaec.control.LoginServlet</servlet-class>
+ </servlet>
+ <servlet-mapping>
+ 	<servlet-name>LoginServlet</servlet-name>
+ 	<url-pattern>/LoginServlet.do</url-pattern>
+ </servlet-mapping>   
+ <servlet>
+ 	<servlet-name>ExitServlet</servlet-name>
+ 	<servlet-class>com.oaec.control.ExitServlet</servlet-class>
+ </servlet>
+ <servlet-mapping>
+ 	<servlet-name>ExitServlet</servlet-name>
+ 	<url-pattern>/ExitServlet.do</url-pattern>
+ </servlet-mapping> 
+ <servlet>
+ 	<servlet-name>TestServlet</servlet-name>
+ 	<servlet-class>com.oaec.control.TestServlet</servlet-class>
+ </servlet>
+ <servlet-mapping>
+ 	<servlet-name>TestServlet</servlet-name>
+ 	<url-pattern>/TestServlet.do</url-pattern>
+ </servlet-mapping>  
+ <servlet>
+ 	<servlet-name>CookieServletLogin</servlet-name>
+ 	<servlet-class>com.oaec.control.CookieServletLogin</servlet-class>
+ </servlet>
+ <servlet-mapping>
+ 	<servlet-name>CookieServletLogin</servlet-name>
+ 	<url-pattern>/CookieServletLogin.do</url-pattern>
+ </servlet-mapping>     
+ <servlet>
+ 	<servlet-name>MovieInfoServlet</servlet-name>
+ 	<servlet-class>com.oaec.control.MovieInfoServlet</servlet-class>
+ </servlet>
+ <servlet-mapping>
+ 	<servlet-name>MovieInfoServlet</servlet-name>
+ 	<url-pattern>/MovieInfoServlet.do</url-pattern>
+ </servlet-mapping>   
+ <servlet>
+ 	<servlet-name>SessionInfoServlet</servlet-name>
+ 	<servlet-class>com.oaec.control.SessionInfoServlet</servlet-class>
+ </servlet>
+ <servlet-mapping>
+ 	<servlet-name>SessionInfoServlet</servlet-name>
+ 	<url-pattern>/SessionInfoServlet.do</url-pattern>
+ </servlet-mapping>   
+ <servlet>
+ 	<servlet-name>SelectMovieCinemaServlet</servlet-name>
+ 	<servlet-class>com.oaec.control.SelectMovieCinemaServlet</servlet-class>
+ </servlet>
+ <servlet-mapping>
+ 	<servlet-name>SelectMovieCinemaServlet</servlet-name>
+ 	<url-pattern>/SelectMovieCinemaServlet.do</url-pattern>
+ </servlet-mapping>   
+ <servlet>
+ 	<servlet-name>QueryHallsServlet</servlet-name>
+ 	<servlet-class>com.oaec.control.QueryHallsServlet</servlet-class>
+ </servlet>
+ <servlet-mapping>
+ 	<servlet-name>QueryHallsServlet</servlet-name>
+ 	<url-pattern>/QueryHallsServlet.do</url-pattern>
+ </servlet-mapping>  
+ <servlet>
+ 	<servlet-name>AddSessionServlet</servlet-name>
+ 	<servlet-class>com.oaec.control.AddSessionServlet</servlet-class>
+ </servlet>
+ <servlet-mapping>
+ 	<servlet-name>AddSessionServlet</servlet-name>
+ 	<url-pattern>/AddSessionServlet.do</url-pattern>
+ </servlet-mapping>   
+ 
+ <filter>
+ 	<filter-name>LoginFilter</filter-name>
+ 	<filter-class>com.oaec.mt.filter.LoginFilter</filter-class>
+ </filter>
+ <filter-mapping>
+ 	<filter-name>LoginFilter</filter-name>
+ 	<url-pattern>*.html</url-pattern> <!--配置拦截路径 /* 所有的请求都拦截-->
+ 	<dispatcher>REQUEST</dispatcher><!-- 拦截外部请求 -->
+ 	<!--<dispatcher>FORWARD</dispatcher> 拦截内部转发 -->
+ </filter-mapping>
+ 
+ <filter>
+ 	<filter-name>EncodingFilter</filter-name>
+ 	<filter-class>com.oaec.mt.filter.EncodingFilter</filter-class>
+ 	<init-param>
+ 		<param-name>encoding</param-name>
+ 		<param-value>utf-8</param-value>
+ 	</init-param>
+ </filter>
+ <filter-mapping>
+ 	<filter-name>EncodingFilter</filter-name>
+ 	<url-pattern>/*</url-pattern> <!--配置拦截路径 /* 所有的请求都拦截-->
+ 	<dispatcher>REQUEST</dispatcher><!-- 拦截外部请求 -->
+ 	<!--<dispatcher>FORWARD</dispatcher> 拦截内部转发 -->
+ </filter-mapping>
+ <filter>
+ 	<filter-name>CookieFilter</filter-name>
+ 	<filter-class>com.oaec.mt.filter.CookieFilter</filter-class>
+ </filter>
+ <filter-mapping>
+ 	<filter-name>CookieFilter</filter-name>
+ 	<url-pattern>/*</url-pattern> <!--配置拦截路径 /* 所有的请求都拦截-->
+ 	<dispatcher>REQUEST</dispatcher><!-- 拦截外部请求 -->
+ 	<!--<dispatcher>FORWARD</dispatcher> 拦截内部转发 -->
+ </filter-mapping> 
+ 
+ 
+ 
+ <!-- 配置监听器 -->
+ <listener>
+ 	<listener-class>com.oaec.mt.listener.SesListener</listener-class>
+ </listener>
+ 
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
