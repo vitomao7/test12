@@ -28,9 +28,6 @@ public class SecRight {
 		this.right_id = right_id;
 		this.right_url = right_url;
 	}
-	public SecRight() {
-		super();
-	}
 	@Override
 	public String toString() {
 		return "SecRight [right_name=" + right_name + ", right_id=" + right_id + ", right_url=" + right_url + "]";
